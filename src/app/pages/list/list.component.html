@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-2 pull-right text-right">
+        <button routerLink='/detail/new' class="btn btn-primary">
+            <i class="fa fa-plus"></i> Nuevo
+        </button>
+    </div>
+    <div class="col-2 text-right">
+        <button type="button" class="btn btn-outline-primary" (click)="deslogueo()">
+            Salir
+        </button>
+    </div>
+</div>
+
+<table class="table mt-3 animated fadeIn faster">
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="text-center mt-3">
+    <h4 clss="alert-heading">Cargando lista...</h4>
+    <p>
+        <i class="fa fa-refresh fa-spin fa-2x"></i>
+    </p>
+</div>
+
+<div class="text-center mt-3">
+    <h4 clss="alert-heading">Lista vacia</h4>
+    <p>
+        <i class="fa fa-exclamation-circle fa-2x"></i>
+    </p>
+</div>

@@ -1,0 +1,88 @@
+<div class="row text-right mt-3">
+    <div class="col">
+        <button routerLink='/list' class="btn btn-danger">
+            <i class="fa fa-arrow-left"></i> Regresar
+        </button>
+    </div>
+</div>
+<hr>
+<div class="row animated fadeIn faster">
+    <div class="col">
+        <form (ngSubmit)="addProperties( Properti )" #Properti="ngForm">
+
+            <div class="form-gropu mt-3">
+                <label>Id:</label>
+                <input [(ngModel)]="propiedad.id" name="id" placeholder="Identificador" type="text" class="form-control" disabled="disabled">
+            </div>
+
+            <div class="form-gropu mt-3">
+                <span class="text-danger animated fadeIn" *ngIf="Properti.submitted && Properti.controls['clave'].errors">Formato no valido</span>
+                <label>Clave:</label>
+                <input [(ngModel)]="propiedad.clave" pattern="^(PCOM)([0-9]{7,8})$" name="clave" placeholder="Clave" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col">
+                    <label>Delegación:</label>
+                    <input [(ngModel)]="propiedad.delegacion" name="delefacion" placeholder="Delegación" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Colonia:</label>
+                    <input [(ngModel)]="propiedad.colonia" name="colonia" placeholder="Colonia" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Calle:</label>
+                    <input [(ngModel)]="propiedad.calle" name="calle" placeholder="Calle" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col">
+                    <label>Número Exterior:</label>
+                    <input [(ngModel)]="propiedad.exterior" name="exterior" placeholder="#" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Número Interior:</label>
+                    <input [(ngModel)]="propiedad.interior" name="interior" placeholder="#" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Precio:</label>
+                    <input [(ngModel)]="propiedad.precio" name="precio" placeholder="$" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col">
+                    <label>Latitud:</label>
+                    <input [(ngModel)]="propiedad.latitud" name="latitud" placeholder="Latitud" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Longitud:</label>
+                    <input [(ngModel)]="propiedad.longitud" name="longitud" placeholder="Longitud" type="text" class="form-control">
+                </div>
+                <div class="col">
+                    <label>Tipo de operacion:</label><br>
+                    <button *ngIf="propiedad.tipo" (click)="propiedad.tipo = false" type="button" class="btn btn-outline-success w-50">
+                      Venta
+                    </button>
+                    <button *ngIf="!propiedad.tipo" (click)="propiedad.tipo = true" type="button" class="btn btn-outline-secondary w-50">
+                      Renta
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <div class="col">
+                    <label>Descripcion:</label>
+                    <textarea [(ngModel)]="propiedad.descripcion" name="descripcion" placeholder="Latitud" type="text" class="form-control"></textarea>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group mt-3 text-center">
+                <button type="submit" class="btn btn-outline-primary w-25">
+                  <i class="fa fa-save"></i> Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
