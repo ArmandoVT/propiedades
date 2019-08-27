@@ -1,0 +1,11 @@
+Instalacciones
+1.-NodeJS: https://nodejs.org/es/
+2.-Angular CLI
+	https://cli.angular.io/
+	https://github.com/angular/angular-cli
+
+Despues de clonar el repositorio
+	1.- Ir a su direccion por consola
+	2.- Agregar comando "npm install", esto instalará todas las dependencias del proyecto
+	3.- ingresar comando "ng serve -o" esto mostrara el projecto en el navegador
+listo para ver el proyecto
